@@ -4,6 +4,27 @@ All notable changes to `phil/commerce-returns-bundle` will be documented in this
 
 Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
+## 0.1.1-alpha - 2026-11-24
+
+### Added
+
+- `LogisticsRestocking`, the `Restocking` of `phil/commerce-logistics-bundle` 0.2 or later, enabled by the
+  configuration `logistics_restocking` — off by default — and its `location`, null for where each SKU left from: the
+  resellable units of a product line go back in its stock under the return's order, at the cost they left at when its
+  costing is on. The package conflicts with the logistics module below 0.1.1.
+
+### Fixed
+
+- It requires `phil/commerce-bundle` 0.4, the version published on 2026-11-20, beside which its requirement of 0.2 or
+  0.3 kept it from installing.
+
+### Changed
+
+- It requires `phil/commerce-bundle` 0.5, the minor released the same evening.
+- Requires the latest minor of each dependency (`doctrine/orm` 3.8, `doctrine/dbal` 4.6,
+  `symfony/event-dispatcher-contracts` 3.8, `symfony/translation-contracts` 3.8), and of each development requirement
+  (`doctrine/doctrine-bundle` 3.4, `doctrine/persistence` 4.2).
+
 ## 0.1.0-alpha - 2026-11-20
 
 ### Added
